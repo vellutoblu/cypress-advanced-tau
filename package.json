@@ -18,7 +18,9 @@
   "author": "Filip Hric (https://filiphric.com/)",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.3.3",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "cypress": "^13.7.3"
   }
 }
