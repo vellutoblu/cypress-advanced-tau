@@ -5,6 +5,7 @@ it('create a new board', () =>{
     
     cy.visit('/')
 
+    cy.get('[placeholder="Name of your first board"]')
    
 
    
