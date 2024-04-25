@@ -1,4 +1,4 @@
-import * as lists from '../fixtures/lists.json'
+import * as lists from '@fixtures/lists.json'
 
 it('playing with typescript', () =>{
 
