@@ -6,6 +6,10 @@
     {
         "name": "list 2",
         "order": 1
+    },
+    {
+        "name": "list 3",
+        "order": 2
     }
 
 ]
