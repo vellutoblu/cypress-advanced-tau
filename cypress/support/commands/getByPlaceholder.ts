@@ -1,3 +1,14 @@
+export{}
+
+declare global {
+    namespace Cypress {
+        interface Chainable {
+            getByPlaceholder(input: string):
+            Chainable<any>
+        }
+    }
+}
+
 Cypress.Commands.add('getByPlaceholder', (input: string)=>{
 
     Cypress.log({
