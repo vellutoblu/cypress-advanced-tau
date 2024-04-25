@@ -12,7 +12,8 @@ it('playing with typescript', () =>{
         .type(`${list.name}{enter}`)
 
     cy.wait('@listCreate')
-
+        .its('response.body.order')
+        .should('eq', list.order)
     })
 
    
