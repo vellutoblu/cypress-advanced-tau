@@ -1,5 +1,6 @@
 it('playing with typescript', () =>{
     cy.visit('/')
 
-    cy.get()
+    cy.contains('Get started!')
+        .should('be.visible')
 })
