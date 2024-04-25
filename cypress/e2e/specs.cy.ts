@@ -1,7 +1,5 @@
 it('playing with typescript', () =>{
-    cy.visit('/')
+    cy.visit('/board/1')
 
-    cy.get('[data-cy="board-item"]')
-        .realHover()
 
 })
