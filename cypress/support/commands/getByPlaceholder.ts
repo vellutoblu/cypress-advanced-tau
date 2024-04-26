@@ -3,6 +3,10 @@ export{}
 declare global {
     namespace Cypress {
         interface Chainable {
+            /**
+             * Get a DOM element based on placeholder value
+             * @param input placeholder text value
+             */
             getByPlaceholder(input: string):
             Chainable<any>
         }
