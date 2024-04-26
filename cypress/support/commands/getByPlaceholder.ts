@@ -11,7 +11,7 @@ declare global {
              * cy.getByPlaceholder('Your email')
              * //will select this element
              * <input placeholder="Your email" />
-             * @deprecated
+             * 
              */
             getByPlaceholder(input: string):
             Chainable<any>
