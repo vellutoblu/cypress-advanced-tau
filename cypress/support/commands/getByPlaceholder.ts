@@ -5,7 +5,12 @@ declare global {
         interface Chainable {
             /**
              * Get a DOM element based on placeholder value
-             * @param input placeholder text value
+             * @param input placeholder text 
+             * @example
+             * //this command
+             * cy.getByPlaceholder('Your email')
+             * //will select this element
+             * <input placeholder="Your email"> />
              */
             getByPlaceholder(input: string):
             Chainable<any>
