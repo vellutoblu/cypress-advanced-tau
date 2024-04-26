@@ -10,7 +10,8 @@ declare global {
              * //this command
              * cy.getByPlaceholder('Your email')
              * //will select this element
-             * <input placeholder="Your email"> />
+             * <input placeholder="Your email" />
+             * @deprecated
              */
             getByPlaceholder(input: string):
             Chainable<any>
