@@ -1,5 +1,5 @@
-export{}
 
+import { Placeholders } from "@support/typings/placeholder"
 declare global {
     namespace Cypress {
         interface Chainable {
@@ -13,13 +13,13 @@ declare global {
              * <input placeholder="Your email" />
              * 
              */
-            getByPlaceholder(input: string):
+            getByPlaceholder(input: Placeholders):
             Chainable<any>
         }
     }
 }
 
-Cypress.Commands.add('getByPlaceholder', (input: string)=>{
+Cypress.Commands.add('getByPlaceholder', (input: Placeholders)=>{
 
     Cypress.log({
         displayName: 'getByPlaceholder',
