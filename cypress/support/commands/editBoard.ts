@@ -4,24 +4,23 @@ declare global {
         interface Chainable {
 
             /**
-             * Add a new board via API
-             * @param name name of the board
+             * Changes board via API
+             * @param body changes you want to make to the board
              * @example
-             * cy.addBoard('new board')
+             * cy.editBoard(1)
              */
 
-            addBoard(name: string) : Chainable<Board>
+            editBoard(body: Board) : Chainable<Board>
         }
     }
 }
 
-Cypress.Commands.add('addBoard', (name: string) =>{
+Cypress.Commands.add('editBoard', (body: Board) =>{
     Cypress.log({
-        displayName: 'addBoard',
-        message: name,
+        displayName: 'edit board',
         consoleProps() {
             return {
-                name
+                id: body.id
             }
         }
     })
