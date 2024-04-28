@@ -1,6 +1,6 @@
 import * as lists from '@fixtures/lists.json'
 
-it('delete a board', () =>{
+it('delete a board test', () =>{
 
     
    cy.addBoard('new board')
