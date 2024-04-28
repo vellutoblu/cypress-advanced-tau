@@ -10,12 +10,12 @@ declare global {
              * cy.editBoard(1)
              */
 
-            editBoard(body: Board) : Chainable<Board>
+            editBoard: typeof editBoard
         }
     }
 }
 
-Cypress.Commands.add('editBoard', (body: Board) =>{
+const editBoard = (body: Partial<Board> & Required<Pick<Board, 'id'>>) =>{
     Cypress.log({
         displayName: 'edit board',
         consoleProps() {
@@ -24,6 +24,8 @@ Cypress.Commands.add('editBoard', (body: Board) =>{
             }
         }
     })
-    return cy.request('POST', '/api/boards' , {name}).its('body')
-})
+    return cy.request('PATCH', `/api/boards${body.id}` , body).its('body')
+}
+
+Cypress.Commands.add('editBoard', editBoard )
 
